@@ -22,7 +22,7 @@ const weatherApp = {
     tempElement.textContent = `${data.main.temp}°C`; 
      wind.textContent=`Wind speed is: ${((data.wind.speed))} km/h`
      dis.textContent=`${data.weather[0].main}`
-     op.style.opacity = 0;
+     op.textContent='Weather Report '
      lat.textContent=`Latitude: ${data.coord.lat} and Longitude: ${data.coord.lon}`
      document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + data.name + "')"
     },
@@ -39,10 +39,3 @@ document.querySelector(".searchbar").addEventListener("keyup", function(e) {
     weatherApp.getWeather(cityName);
   }
 });
-
-
-
-
-
-
-
